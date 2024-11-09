@@ -1,0 +1,181 @@
+/* Variables CSS */
+:root {
+    --color-bg: #f8f9fa;
+    --color-text: #333;
+    --color-secondary: #666;
+    --color-button-add: #4CAF50; /* Verde */
+    --color-button-remove: #dc3545; /* Rojo */
+    --color-button-warning: #ffc107; /* Amarillo */
+    --color-button-info: #17a2b8; /* Azul claro */
+    --color-button-add-hover: #45a049; /* Verde oscuro */
+    --color-button-remove-hover: #c82333; /* Rojo oscuro */
+    --color-button-warning-hover: #e0a800; /* Amarillo oscuro */
+    --color-button-info-hover: #138496; /* Azul oscuro */
+    --shadow: rgba(0, 0, 0, 0.1);
+    --border-radius: 8px; /* Bordes más redondeados */
+    --max-width: 800px;
+    --input-border: 1px solid #ddd;
+}
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Sección de platos y menús */
+#platos, #menus {
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+.plato, .menu {
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px var(--shadow);
+    padding: 1rem;
+    margin-bottom: 1.5rem; /* Más espacio entre elementos */
+    transition: box-shadow 0.3s ease, transform 0.2s ease; /* Efecto de transformación */
+}
+
+.plato:hover, .menu:hover {
+    box-shadow: 0 4px 8px var(--shadow);
+    transform: translateY(-2px); /* Efecto de desplazamiento */
+}
+
+.plato h3, .menu h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.plato p, .menu p {
+    color: var(--color-secondary);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.plato .precio {
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+/* Estilos del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px var(--shadow);
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    padding: 0.5rem;
+    border-radius: 3px;
+    border: var(--input-border);
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: var(--color-button-add); /* Color del borde al enfocar */
+}
+
+/* Botones */
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones para el fondo y el tamaño */
+    font-weight: bold;
+}
+
+#btnAgregarPlato {
+    background-color: var(--color-button-add);
+    color: white;
+}
+
+#btnAgregarPlato:hover {
+    background-color: var(--color-button-add-hover);
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+#btnAgregarMenu {
+    background-color: var(--color-button-add);
+    color: white;
+}
+
+#btnAgregarMenu:hover {
+    background-color: var(--color-button-add-hover);
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+#btnAgregarPlatoMenu {
+    background-color: var(--color-button-add);
+    color: white;
+}
+
+#btnAgregarPlatoMenu:hover {
+    background-color: var(--color-button-add-hover);
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+#eliminar {
+    padding: 1rem;
+}
+
+#btnEliminar {
+    background-color: var(--color-button-remove);
+    color: white;
+}
+
+#btnEliminar:hover {
+    background-color: var(--color-button-remove-hover);
+    transform: scale(1.05);
+} 
+#btnEliminar2 {
+    background-color: var(--color-button-remove);
+    color: white;
+}
+
+#btnEliminar2:hover {
+    background-color: var(--color-button-remove-hover);
+    transform: scale(1.05);
+}
+
+
+/* Estilos de media queries para responsividad */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem; /* Menos padding en pantallas pequeñas */
+    }
+
+    form {
+        width: 90%; /* Ancho del formulario en pantallas pequeñas */
+    }
+}
